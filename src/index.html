@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="description" content="Ini adalah website bisnis latihan"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="style/output.css" /> -->
+    <title>Web Bisnis</title>
+</head>
+
+<body>
+  
+  <!-- Kode lama
+  <div id="head"  class="overflow-hidden bg-[#c9d3ff] p-2.5">
+        <img src="../public/cleaning inside.png" width="50px">
+        <div class="float-right">
+          <a class="bg-[dodgerblue] text-[white]" href="#unggulan">Produk Unggulan</a>
+          <a class="bg-[dodgerblue] text-[white]" href="#testimoni">Testimoni</a>
+          <a href="#contact">Kontak</a>
+        </div>
+      </div>
+      -->
+
+      <header class="relative z-50 w-full flex-none text-sm/6 font-semibold text-slate-900">
+        <nav aria-label="Global" class="mx-auto max-w-container px-4 sm:px-6 lg:px-8">
+          <div class="relative flex items-center py-[1.1rem]">
+            <div class="absolute inset-x-0 bottom-0 h-px bg-slate-900/5">				
+            </div>
+      
+      <!-- Ini Bagian Logo -->
+      <!-- ///////////////////////////////// -->
+      
+      <a class="flex-none text-slate-900" href="localhost:3000">
+          <span class="sr-only">
+            Cleaning Inside
+          </span>
+          <img src="../public/cleaning inside.png" width="60px">
+
+        <!-- <svg class="h-6 w-auto" aria-hidden="true" viewBox="0 0 160 24" fill="none">
+          <path d="M18.724 1.714c-4.538 0-7.376 2.286-8.51 6.857 1.702-2.285 3.687-3.143 5.957-2.57 1.296.325 2.22 1.271 3.245 2.318 1.668 1.706 3.6 3.681 7.819 3.681 4.539 0 7.376-2.286 8.51-6.857-1.701 2.286-3.687 3.143-5.957 2.571-1.294-.325-2.22-1.272-3.245-2.32-1.668-1.705-3.6-3.68-7.819-3.68zM10.214 12c-4.539 0-7.376 2.286-8.51 6.857 1.701-2.286 3.687-3.143 5.957-2.571 1.294.325 2.22 1.272 3.245 2.32 1.668 1.705 3.6 3.68 7.818 3.68 4.54 0 7.377-2.286 8.511-6.857-1.702 2.286-3.688 3.143-5.957 2.571-1.295-.326-2.22-1.272-3.245-2.32-1.669-1.705-3.6-3.68-7.82-3.68z" class="fill-sky-400">
+              </path>
+          <path d="M51.285 9.531V6.857h-3.166v-3.6l-2.758.823v2.777h-2.348v2.674h2.348v6.172c0 3.343 1.686 4.526 5.924 4.011V17.22c-2.094.103-3.166.129-3.166-1.517V9.53h3.166zm12.087-2.674v1.826c-.97-1.337-2.476-2.16-4.468-2.16-3.472 0-6.357 2.931-6.357 6.763 0 3.805 2.885 6.763 6.357 6.763 1.992 0 3.498-.823 4.468-2.186v1.851h2.758V6.857h-2.758zM59.338 17.4c-2.297 0-4.034-1.723-4.034-4.114 0-2.392 1.736-4.115 4.034-4.115s4.034 1.723 4.034 4.115c0 2.391-1.736 4.114-4.034 4.114zM70.723 4.929c.97 0 1.762-.823 1.762-1.775 0-.977-.792-1.774-1.762-1.774s-1.762.797-1.762 1.774c0 .952.792 1.775 1.762 1.775zm-1.379 14.785h2.758V6.857h-2.758v12.857zm5.96 0h2.757V.943h-2.758v18.771zM95.969 6.857l-2.502 8.872-2.655-8.872h-2.63L85.5 15.73l-2.477-8.872h-2.91l4.008 12.857h2.707l2.68-8.665 2.656 8.665h2.706L98.88 6.857h-2.911zm6.32-1.928c.97 0 1.762-.823 1.762-1.775 0-.977-.792-1.774-1.762-1.774s-1.762.797-1.762 1.774c0 .952.792 1.775 1.762 1.775zm-1.379 14.785h2.758V6.857h-2.758v12.857zm12.674-13.191c-1.736 0-3.115.643-3.957 1.98V6.857h-2.758v12.857h2.758v-6.891c0-2.623 1.43-3.703 3.242-3.703 1.737 0 2.86 1.029 2.86 2.983v7.611h2.757V11.82c0-3.343-2.042-5.297-4.902-5.297zm17.982-4.809v6.969c-.971-1.337-2.477-2.16-4.468-2.16-3.473 0-6.358 2.931-6.358 6.763 0 3.805 2.885 6.763 6.358 6.763 1.991 0 3.497-.823 4.468-2.186v1.851h2.757v-18h-2.757zM127.532 17.4c-2.298 0-4.034-1.723-4.034-4.114 0-2.392 1.736-4.115 4.034-4.115 2.297 0 4.034 1.723 4.034 4.115 0 2.391-1.737 4.114-4.034 4.114z" fill="currentColor">
+              </path>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M145.532 3.429h8.511c.902 0 1.768.36 2.407 1.004.638.643.997 1.515.997 2.424v8.572c0 .909-.359 1.781-.997 2.424a3.394 3.394 0 01-2.407 1.004h-8.511a3.39 3.39 0 01-2.407-1.004 3.438 3.438 0 01-.997-2.424V6.857c0-.91.358-1.781.997-2.424a3.39 3.39 0 012.407-1.004zm-5.106 3.428c0-1.364.538-2.672 1.495-3.636a5.09 5.09 0 013.611-1.507h8.511c1.354 0 2.653.542 3.61 1.507a5.16 5.16 0 011.496 3.636v8.572a5.16 5.16 0 01-1.496 3.636 5.086 5.086 0 01-3.61 1.506h-8.511a5.09 5.09 0 01-3.611-1.506 5.164 5.164 0 01-1.495-3.636V6.857zm10.907 6.251c0 1.812-1.359 2.916-3.193 2.916-1.823 0-3.182-1.104-3.182-2.916v-5.65h1.633v5.52c0 .815.429 1.427 1.549 1.427 1.12 0 1.549-.612 1.549-1.428v-5.52h1.644v5.652zm1.72 2.748V7.457h1.644v8.4h-1.644z" fill="currentColor">
+              </path>
+        </svg> -->
+      </a>
+      
+      <!-- ///////////////////////////////// -->
+      <!-- Batas bagian Logo -->
+      
+      
+      
+      
+      <!-- Ini Bagian Mini Menubar -->
+      <!-- ///////////////////////////////// -->
+      
+      <a href="#unggulan" class="group -my-2 ml-6 hidden items-center gap-2 rounded-full bg-white/25 px-3 py-2 text-xs text-slate-900 ring-1 ring-inset ring-black/[0.08] hover:bg-white/50 hover:ring-black/[0.13] sm:flex md:ml-8 lg:hidden min-[1300px]:flex">
+        
+        <img class="size-4" src="../public/starglitter.png" width="5%">
+        
+        <!-- <svg class="size-4 fill-sky-500" viewBox="0 0 24 24">
+          <path fill-rule="evenodd" d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z" clip-rule="evenodd">
+          </path>
+        </svg> -->
+
+        <span class="font-semibold">Produk Unggulan kami</span>
+      
+        <svg width="2" height="2" aria-hidden="true" class="fill-slate-900">
+            <circle cx="1" cy="1" r="1"></circle>
+          </svg>
+          
+          <span class="font-medium">
+            <span>
+              Nikmati Diskon!
+              </span>
+          </span>
+          
+          <svg viewBox="0 0 5 8" class="h-2 w-[5px] fill-black/30 group-hover:fill-black/60" fill-rule="evenodd" clip-rule="evenodd" aria-hidden="true">
+            <path d="M.2.24A.75.75 0 0 1 1.26.2l3.5 3.25a.75.75 0 0 1 0 1.1L1.26 7.8A.75.75 0 0 1 .24 6.7L3.148 4 .24 1.3A.75.75 0 0 1 .2.24Z"></path>
+          </svg>
+      </a>
+      
+      <!-- ///////////////////////////////// -->
+      <!-- Batas bagian Mini Menubar -->
+      
+      
+      
+        <div class="ml-auto hidden lg:flex lg:items-center">
+            <a class=" text-sky-950 hover:text-sky-500" href="#unggulan">Produk</a>
+              <a class="ml-8  text-sky-950 hover:text-sky-500" href="#testimoni">Testimoni</a>
+              <a class="ml-8  text-sky-950 hover:text-sky-500" href="#testimoni">Kritik & Saran</a>
+          </div>
+          
+          
+      <!-- Ini Bagian Tombol Pencarian -->
+      <!-- ///////////////////////////////// -->
+      
+          <button type="button" class="-my-1 ml-auto flex size-8 items-center justify-center rounded-lg lg:ml-8">
+            <span class="sr-only">Pencarian Produk</span>
+            <i class="fa fa-search" aria-hidden="true"></i>
+              <!-- <svg fill="none" xmlns="http://www.w3.org/2000/svg" class="size-6 fill-gray-900 hover:fill-gray-900">
+                <path d="M20.47 21.53a.75.75 0 1 0 1.06-1.06l-1.06 1.06Zm-9.97-4.28a6.75 6.75 0 0 1-6.75-6.75h-1.5a8.25 8.25 0 0 0 8.25 8.25v-1.5ZM3.75 10.5a6.75 6.75 0 0 1 6.75-6.75v-1.5a8.25 8.25 0 0 0-8.25 8.25h1.5Zm6.75-6.75a6.75 6.75 0 0 1 6.75 6.75h1.5a8.25 8.25 0 0 0-8.25-8.25v1.5Zm11.03 16.72-5.196-5.197-1.061 1.06 5.197 5.197 1.06-1.06Zm-4.28-9.97c0 1.864-.755 3.55-1.977 4.773l1.06 1.06A8.226 8.226 0 0 0 18.75 10.5h-1.5Zm-1.977 4.773A6.727 6.727 0 0 1 10.5 17.25v1.5a8.226 8.226 0 0 0 5.834-2.416l-1.061-1.061Z">
+                  </path>
+               </svg> -->
+          </button>
+          
+      <!-- ///////////////////////////////// -->
+      <!-- Batas bagian Tombol Pencarian -->
+      
+      
+      
+      <!-- Ini Bagian Burger Button Menubar Flex -->
+      <!-- ///////////////////////////////// -->
+      
+          <button type="button" class="-my-1 -mr-1 ml-6 flex size-8 items-center justify-center lg:hidden">
+            <span class="sr-only">Open navigation</span>
+            <svg viewBox="0 0 24 24" class="size-6 stroke-slate-900">
+                <path d="M3.75 12h16.5M3.75 6.75h16.5M3.75 17.25h16.5" fill="none" stroke-width="1.5" stroke-linecap="round">
+                </path>
+              </svg>
+          </button>
+      <!-- ///////////////////////////////// --> 
+       
+       
+      <!-- Ini Bagian Burger Button Fungsi Transaksi -->
+      <!-- ///////////////////////////////// -->
+      
+          <div class="hidden lg:ml-8 lg:flex lg:items-center lg:border-l lg:border-slate-900/15 lg:pl-8">
+            <a class="text-sky-950 hover:text-orange-600" href="#chekoutkeranjang"> Keranjang 
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            </a>
+            
+            <!-- <a href="#chekoutkeranjang">Keranjang</a> -->
+
+              <a class="inline-flex justify-center rounded-lg text-sm font-semibold py-2.5 px-4 bg-slate-900 text-white hover:bg-slate-700 -my-2.5 ml-8" href="/all-access">
+                <span>Temukan kupon diskon! 
+                  <span aria-hidden="true">→
+                    </span>
+                </span>
+              </a>
+          </div>
+      <!-- ///////////////////////////////// -->    
+      
+      </div>
+      </nav>
+      </header>
+
+    <div class="w-full">
+      <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/furniture-banner-ads-design-template-ae02697c1be1b28f35e46d0c45833d5c_screen.jpg?ts=1663318497" width="100%">
+    </div>
+<br>
+
+<hero class="mt-16 sm:mt-20 relative">
+  <div class="relative max-w-3xl px-4 sm:px-6 lg:px-8 mx-auto sm:text-center">
+    <h1 class="text-sm leading-6 font-semibold text-sky-500">Assalamualaikum, Ayah-Bunda!</h1>
+      <p class="mt-6 text-[2.5rem] leading-none sm:text-6xl tracking-tight font-bold text-sky-600">Cleaning Inside adalah Toko Bangunan
+      </p>
+      <p class="mt-4 text-lg text-slate-600 dark:text-slate-400">Kami menyediakan barang-barang murah, bahkan lebih murah daripada harga pasar. Bukan barang curian kok! Saatnya cleaning-cleaning rumah Anda, kami menyediakan semua furnitur yang Anda butuhkan! —<!-- --> 
+        <a class="font-semibold border-b border-sky-300 text-gray-900 hover:border-b-2" href="/showcase/nasa">Cari produk
+          </a>.
+      </p>
+  </div>
+</hero>
+
+
+
+      <!-- Kode lama
+      <div class="p-12 bg-sky-500 text-center text-slate-100 text-2xl">
+          <h1>Selamat Datang di <i class="text-teksisi">Cleaning Inside</i></h1>
+           <p>
+            Saatnya cleaning-cleaning rumah Anda, kami menyediakan semua furnitur yang Anda butuhkan!
+          </p>
+
+      </div> -->
+
+
+
+<ul class="grid max-w-[26rem] sm:max-w-[52.5rem] mt-16 sm:mt-20 md:mt-32 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mx-auto gap-6 lg:gap-y-8 xl:gap-x-8 lg:max-w-7xl px-4 sm:px-6 lg:px-8">
+	<li class="group relative rounded-3xl bg-slate-50 p-6 hover:bg-slate-100">
+    	<div class="aspect-[672/494] relative rounded-md transform overflow-hidden shadow-[0_2px_8px_rgba(15,23,42,0.08)] bg-slate-200">
+        	<img alt="" fetchpriority="high" width="672" height="494" decoding="async" data-nimg="1" class="absolute inset-0 w-full h-full" style="color:transparent" src="https://down-id.img.susercontent.com/file/id-11134207-7r98t-lnkwwvp3jwcc3a">
+
+            <!-- <div style="opacity: 0; transition: opacity 0.5s linear;">
+            	<video preload="none" muted="" playsinline="" class="absolute inset-0 w-full h-full [mask-image:radial-gradient(white,black)]">
+                	<source src="... .mp4" type="video/mp4">
+              </video>
+            </div> -->
+      </div>
+        
+        <div class="flex flex-wrap items-center mt-6">
+        	<h2 class="text-sm leading-6 text-slate-900 group-hover:text-sky-500 ">
+        		<a href="/showcase/openai">
+        			<span class="absolute inset-0 rounded-3xl"></span>Hiasan Dinding Atlantis
+            </a>
+          </h2>
+
+             <p class="w-full flex-none text-[0.8125rem] leading-6 text-slate-500 ">Hiasan dinding Istana Dewa Neptunus. Dekorasi asli arsitektur atlantis.
+             </p>
+        </div>
+   </li>
+
+   <li class="group relative rounded-3xl bg-slate-50 p-6 hover:bg-slate-100">
+    <div class="aspect-[672/494] relative rounded-md transform overflow-hidden shadow-[0_2px_8px_rgba(15,23,42,0.08)] bg-slate-200">
+        <img alt="" fetchpriority="high" width="672" height="494" decoding="async" data-nimg="1" class="absolute inset-0 w-full h-full" style="color:transparent" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsqKGZsYGyG2cM2fFnaFrucCW7Jr3ctNIsQQ&s">
+        
+          <!-- <div style="opacity: 0; transition: opacity 0.5s linear;">
+            <video preload="none" muted="" playsinline="" class="absolute inset-0 w-full h-full [mask-image:radial-gradient(white,black)]">
+                <source src="... .mp4" type="video/mp4">
+            </video>
+          </div> -->
+    </div>
+      
+      <div class="flex flex-wrap items-center mt-6">
+        <h2 class="text-sm leading-6 text-slate-900 group-hover:text-sky-500 ">
+          <a href="/showcase/openai">
+            <span class="absolute inset-0 rounded-3xl"></span>Set Pekarangan Rumah Squidward
+          </a>
+        </h2>
+
+           <p class="w-full flex-none text-[0.8125rem] leading-6 text-slate-500 ">Hanya orang yang mengerti seni dapat memahami keindahan pekarangan ini.
+           </p>
+      </div>
+  </li>
+
+  <li class="group relative rounded-3xl bg-slate-50 p-6 hover:bg-slate-100">
+    <div class="aspect-[672/494] relative rounded-md transform overflow-hidden shadow-[0_2px_8px_rgba(15,23,42,0.08)] bg-slate-200">
+        <img alt="" fetchpriority="high" width="672" height="494" decoding="async" data-nimg="1" class="absolute inset-0 w-full h-full" style="color:transparent" src="https://rumahmebel.id/wp-content/uploads/2023/12/Hiasan-Kamar-Tidur.jpg">
+        
+          <!-- <div style="opacity: 0; transition: opacity 0.5s linear;">
+            <video preload="none" muted="" playsinline="" class="absolute inset-0 w-full h-full [mask-image:radial-gradient(white,black)]">
+                <source src="... .mp4" type="video/mp4">
+            </video>
+          </div> -->
+    </div>
+      
+      <div class="flex flex-wrap items-center mt-6">
+        <h2 class="text-sm leading-6 text-slate-900 group-hover:text-sky-500 ">
+          <a href="/showcase/openai">
+            <span class="absolute inset-0 rounded-3xl"></span>Set Kamar Tidur Spongebob
+          </a>
+        </h2>
+
+           <p class="w-full flex-none text-[0.8125rem] leading-6 text-slate-500 ">Spongebob warnanya kuning, Saya suka warna kuning.
+           </p>
+      </div>
+  </li>
+
+  <li class="group relative rounded-3xl bg-slate-50 p-6 hover:bg-slate-100">
+    	<div class="aspect-[672/494] relative rounded-md transform overflow-hidden shadow-[0_2px_8px_rgba(15,23,42,0.08)] bg-slate-200">
+        	<img alt="" fetchpriority="high" width="672" height="494" decoding="async" data-nimg="1" class="absolute inset-0 w-full h-full" style="color:transparent" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdtXXksuYXK8x4cekshaY1f9vLEBwI4skkY1HfVWhz-Y3Pz37_AOUKJ3JXoFkcj0iCrd8&usqp=CAU">
+          
+            <!-- <div style="opacity: 0; transition: opacity 0.5s linear;">
+            	<video preload="none" muted="" playsinline="" class="absolute inset-0 w-full h-full [mask-image:radial-gradient(white,black)]">
+                	<source src="... .mp4" type="video/mp4">
+              </video>
+            </div> -->
+      </div>
+        
+        <div class="flex flex-wrap items-center mt-6">
+        	<h2 class="text-sm leading-6 text-slate-900 group-hover:text-sky-500 ">
+        		<a href="/showcase/openai">
+        			<span class="absolute inset-0 rounded-3xl"></span>Hiasan Dinding Istana Plankton
+            </a>
+          </h2>
+
+             <p class="w-full flex-none text-[0.8125rem] leading-6 text-slate-500 ">Plankton biasanya dimakan karena ia adalah tumbuhan laut. Ya, itu adalah <i>Fitoplankton!</i>
+             </p>
+        </div>
+   </li>
+
+   <li class="group relative rounded-3xl bg-slate-50 p-6 hover:bg-slate-100">
+    <div class="aspect-[672/494] relative rounded-md transform overflow-hidden shadow-[0_2px_8px_rgba(15,23,42,0.08)] bg-slate-200">
+        <img alt="" fetchpriority="high" width="672" height="494" decoding="async" data-nimg="1" class="absolute inset-0 w-full h-full" style="color:transparent" src="https://i0.wp.com/dekoruma.blog/wp-content/uploads/2018/05/5b0f3125d845f9ba5aa1ee1fcf268ce5d95f235b.jpg?fit=1033%2C689&ssl=1">
+        
+          <!-- <div style="opacity: 0; transition: opacity 0.5s linear;">
+            <video preload="none" muted="" playsinline="" class="absolute inset-0 w-full h-full [mask-image:radial-gradient(white,black)]">
+                <source src="... .mp4" type="video/mp4">
+            </video>
+          </div> -->
+    </div>
+      
+      <div class="flex flex-wrap items-center mt-6">
+        <h2 class="text-sm leading-6 text-slate-900 group-hover:text-sky-500 ">
+          <a href="/showcase/openai">
+            <span class="absolute inset-0 rounded-3xl"></span>Set Kamar Tidur Anak
+          </a>
+        </h2>
+
+           <p class="w-full flex-none text-[0.8125rem] leading-6 text-slate-500 ">Anak-anak pasti suka. Apalagi orang dewasa!
+           </p>
+      </div>
+ </li>
+
+ <li class="group relative rounded-3xl bg-slate-50 p-6 hover:bg-slate-100">
+  <div class="aspect-[672/494] relative rounded-md transform overflow-hidden shadow-[0_2px_8px_rgba(15,23,42,0.08)] bg-slate-200">
+      <img alt="" fetchpriority="high" width="672" height="494" decoding="async" data-nimg="1" class="absolute inset-0 w-full h-full" style="color:transparent" src="https://arsitagx-master-article.s3.ap-southeast-1.amazonaws.com/article-photo/1107/hiasan-kamar-4.jpg">
+      
+        <!-- <div style="opacity: 0; transition: opacity 0.5s linear;">
+          <video preload="none" muted="" playsinline="" class="absolute inset-0 w-full h-full [mask-image:radial-gradient(white,black)]">
+              <source src="... .mp4" type="video/mp4">
+          </video>
+        </div> -->
+  </div>
+    
+    <div class="flex flex-wrap items-center mt-6">
+      <h2 class="text-sm leading-6 text-slate-900 group-hover:text-sky-500 ">
+        <a href="/showcase/openai">
+          <span class="absolute inset-0 rounded-3xl"></span>Set Kamar Kelas Bisnis
+        </a>
+      </h2>
+
+         <p class="w-full flex-none text-[0.8125rem] leading-6 text-slate-500 ">Arsitekturnya minimalis dan elegan. Kesan mewah cocok untuk para pebisnis!
+         </p>
+    </div>
+</li>
+</ul>
+
+<br>
+
+
+<div id="unggulan" class="p-10 relative z-20">
+	<div>
+    	
+        <div class="flex items-center">
+        	<h1 class="inline-block text-2xl sm:text-3xl font-extrabold text-blue-600 tracking-tight">Hot Offer!
+            </h1>
+        </div>
+    </div>
+    
+    <p class="mt-2 text-lg text-slate-700">Lihat produk unggulan kami!
+    </p>
+  </div>
+
+
+<!-- Kode Lama
+<h1 id="unggulan" style="padding: 20px;"><b style="color: brown;">Hot Offer!</b> 
+  Produk Unggulan Kami!</h1> -->
+
+
+
+<div class="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8 relative mt-10 md:mt-0">
+	<ul class="grid grid-cols-[repeat(auto-fill,minmax(12rem,1fr))] gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    	<li class="">
+        	<div class="group relative before:absolute before:-inset-2.5 before:rounded-[20px] before:bg-gray-50 before:opacity-0 hover:before:opacity-100">
+            	<div class="relative aspect-[2/1] overflow-hidden rounded-lg bg-gray-100 ring-1 ring-gray-900/10">
+                	<img src="https://img.freepik.com/premium-photo/joyous-family-gathering-beautifully-set-dining-table-sunny-afternoon-with-smiling-faces-shared-dishes_1247367-75607.jpg?w=360" alt="" class="absolute inset-0 h-full w-full">
+                </div>
+                <h4 class="mt-4 text-sm font-medium text-slate-900 group-hover:text-indigo-600">
+                	<a href="https://tailwindui.com/components/application-ui/application-shells/stacked">
+                    <span class="absolute -inset-2.5 z-10"></span>
+                    <span class="relative">Paket Family Gathering</span>
+                    </a>
+                </h4>
+            <p class="relative mt-1.5 text-xs font-medium text-slate-500"><s>	Rp60.000.000,00</s>	Rp59.999.000,00</p>
+            </div>
+       </li>
+       <li class="">
+        <div class="group relative before:absolute before:-inset-2.5 before:rounded-[20px] before:bg-gray-50 before:opacity-0 hover:before:opacity-100">
+            <div class="relative aspect-[2/1] overflow-hidden rounded-lg bg-gray-100 ring-1 ring-gray-900/10">
+                <img src="https://storage-asset.msi.com/event/2023/CND/multi-monitor-campaign/images/kv-bg-pc.jpg" alt="" class="absolute inset-0 h-full w-full">
+              </div>
+              <h4 class="mt-4 text-sm font-medium text-slate-900 group-hover:text-indigo-600">
+                <a href="https://tailwindui.com/components/application-ui/application-shells/stacked">
+                  <span class="absolute -inset-2.5 z-10"></span>
+                  <span class="relative">Monitor CMYK Gaming 120Hz</span>
+                  </a>
+              </h4>
+          <p class="relative mt-1.5 text-xs font-medium text-slate-500"><s>	Rp26.000.000,00</s>	Rp.25.120.000,00</p>
+          </div>
+     </li>
+       <li class="">
+        <div class="group relative before:absolute before:-inset-2.5 before:rounded-[20px] before:bg-gray-50 before:opacity-0 hover:before:opacity-100">
+            <div class="relative aspect-[2/1] overflow-hidden rounded-lg bg-gray-100 ring-1 ring-gray-900/10">
+                <img src="https://assets-a1.kompasiana.com/items/album/2023/12/12/img-20231212-114357-6577f43012d50f741a0530f2.jpg" alt="" class="absolute inset-0 h-full w-full">
+              </div>
+              <h4 class="mt-4 text-sm font-medium text-slate-900 group-hover:text-indigo-600">
+                <a href="https://tailwindui.com/components/application-ui/application-shells/stacked">
+                  <span class="absolute -inset-2.5 z-10"></span>
+                  <span class="relative">Sendok Sup Abad ke-17</span>
+                  </a>
+              </h4>
+          <p class="relative mt-1.5 text-xs font-medium text-slate-500"><s>	Rp10.000.000,00</s>	Rp.9.980.000,00</p>
+          </div>
+     </li>
+     <li class="">
+      <div class="group relative before:absolute before:-inset-2.5 before:rounded-[20px] before:bg-gray-50 before:opacity-0 hover:before:opacity-100">
+          <div class="relative aspect-[2/1] overflow-hidden rounded-lg bg-gray-100 ring-1 ring-gray-900/10">
+              <img src="https://cache.lahelu.com/image-PNENy7kcl-77288" alt="" class="absolute inset-0 h-full w-full">
+            </div>
+            <h4 class="mt-4 text-sm font-medium text-slate-900 group-hover:text-indigo-600">
+              <a href="https://tailwindui.com/components/application-ui/application-shells/stacked">
+                <span class="absolute -inset-2.5 z-10"></span>
+                <span class="relative">Lukisan si Tampan dan Pemberani</span>
+                </a>
+            </h4>
+        <p class="relative mt-1.5 text-xs font-medium text-slate-500"><s>	Rp3.000.000,00</s>	Rp.2.980.000,00,00</p>
+        </div>
+   </li>
+</div>
+
+
+
+
+
+<!-- 
+      <div class="row"> 
+        <div class="column">
+          <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//catalog-image/96/MTA-138720910/no-brand_no-brand_full01.jpg" style="width:100%">
+          <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98t-lnkwwvp3jwcc3a" style="width:100%">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdtXXksuYXK8x4cekshaY1f9vLEBwI4skkY1HfVWhz-Y3Pz37_AOUKJ3JXoFkcj0iCrd8&usqp=CAU" style="width:100%">
+      
+        </div>
+        <div class="column">
+          <img src="https://img.lazcdn.com/g/p/0d7bfee4300311271007c5be59c0116f.jpg_720x720q80.jpg" style="width:100%">
+          <img src="https://kreasiprimaland.com/wp-content/uploads/2021/08/hiasan-dinding-bagus.jpg" style="width:100%">
+          <img src="https://www.ruparupa.com/blog/wp-content/uploads/2021/12/image0-6.png" style="width:100%">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrdp1bnokUuJLqOO_Z0U_EHl9RRhUAPD78OA&s" style="width:100%">
+        </div>  
+        <div class="column">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm2SsCw1ieBfpnx-2qR6yuyw8KOy2r9hY9dA&s" style="width:100%">
+          <img src="https://o-cdn-cas.oramiland.com/parenting/images/Dekorasi_Taman_ala_Jepang.width-800.format-webp.webp" style="width:100%">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsqKGZsYGyG2cM2fFnaFrucCW7Jr3ctNIsQQ&s" style="width:100%">
+          <img src="https://img.lazcdn.com/g/ff/kf/Sa46db39893934bc7bc7335625cd6f2c66.jpg_720x720q80.jpg" style="width:100%">
+        
+        </div>
+        <div class="column">
+          <img src="https://i0.wp.com/dekoruma.blog/wp-content/uploads/2018/05/5b0f3125d845f9ba5aa1ee1fcf268ce5d95f235b.jpg?fit=1033%2C689&ssl=1" style="width:100%">
+          <img src="https://ds393qgzrxwzn.cloudfront.net/resize/m600x500/cat1/img/images/0/Tu19e3Wo1j.jpg" style="width:100%">
+          <img src="https://arsitagx-master-article.s3.ap-southeast-1.amazonaws.com/article-photo/1107/hiasan-kamar-4.jpg" style="width:100%">
+          <img src="https://rumahmebel.id/wp-content/uploads/2023/12/Hiasan-Kamar-Tidur.jpg" style="width:100%">
+        </div>
+      </div>
+ -->
+
+ <!-- BAGIAN TABEL -->   
+ 
+<div class="mt-4 -mb-3">
+	<div class="not-prose relative bg-slate-50 rounded-xl overflow-hidden">
+    	<div class="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,#fff,rgba(255,255,255,0.6))]" style="background-position: 10px 10px;">
+        </div>
+        <div class="relative rounded-xl overflow-auto">
+        <div class="shadow-sm overflow-hidden px-4 py-8 sm:px-8">
+  
+  			<table class="border-collapse table-auto w-full text-sm">
+    			<thead>
+      				<tr class="text-sky-700 italic font-extrabold">
+        				<th class="border p-4 pl-8 pt-3 pb-3 text-left">Nama Produk</th>
+        				<th class="border p-4 pr-8 pt-3 pb-3 text-left">Kategori</th>
+                <th class="border p-4 pr-8 pt-3 pb-3 text-left">Status Ketersediaan</th>
+                <th class="border p-4 pr-8 pt-3 pb-3 text-left">Tahun Produksi</th>
+                <th class="border p-4 pr-8 pt-3 pb-3 text-left">Harga Cicilan/bulan (tenor 12  bulan)</th>
+      				</tr>
+    			</thead>
+    	
+        		<tbody class="bg-white">
+      				<tr>
+        				<td class="border border-slate-200  p-4 pl-8 text-slate-500 ">Paket Family Gathering</td>
+        				<td class="border border-slate-200 p-4 pr-8 text-slate-500 ">Family Furniture</td>
+                <td class="border border-slate-200 p-4 pr-8 text-slate-500 ">Tersedia di Gudang</td>
+                <td class="border border-slate-200 p-4 pr-8 text-slate-500 ">2019</td>
+                <td class="border border-slate-200 p-4 pr-8 text-slate-500 ">Rp59.999.000,00</td>
+      				</tr>
+              <tr>
+        				<td class="border border-slate-200  p-4 pl-8 text-slate-500 ">Fancyson Table Set</td>
+        				<td class="border border-slate-200 p-4 pr-8 text-slate-500 ">Kitchen Set</td>
+                <td class="border border-slate-200 p-4 pr-8 text-slate-500 ">Stok Habis</td>
+                <td class="border border-slate-200 p-4 pr-8 text-slate-500 ">2020</td>
+                <td class="border border-slate-200 p-4 pr-8 text-slate-500 ">Rp10.200.000,00</td>
+      				</tr>
+              <tr>
+        				<td class="border border-slate-200  p-4 pl-8 text-slate-500 ">Kasur Busa Dewa Neptunus</td>
+        				<td class="border border-slate-200 p-4 pr-8 text-slate-500 ">Bedroom Furniture</td>
+                <td class="border border-slate-200 p-4 pr-8 text-slate-500 ">Tersedia di Gudang</td>
+                <td class="border border-slate-200 p-4 pr-8 text-slate-500 ">2010</td>
+                <td class="border border-slate-200 p-4 pr-8 text-slate-500 ">Rp19.999.000,00</td>
+      				</tr>
+              <tr>
+        				<td class="border border-slate-200  p-4 pl-8 text-slate-500 ">Sendok Sup Abad ke-17</td>
+        				<td class="border border-slate-200 p-4 pr-8 text-slate-500 ">Kitchen Set</td>
+                <td class="border border-slate-200 p-4 pr-8 text-slate-500 ">Stok Habis</td>
+                <td class="border border-slate-200 p-4 pr-8 text-slate-500 ">1690</td>
+                <td class="border border-slate-200 p-4 pr-8 text-slate-500 ">Rp75.000,00</td>
+      				</tr>
+              <tr>
+        				<td class="border border-slate-200  p-4 pl-8 text-slate-500 ">Shower Jet Pump*</td>
+        				<td class="border border-slate-200 p-4 pr-8 text-slate-500 ">Bathroom Equipment</td>
+                <td class="border border-slate-200 p-4 pr-8 text-slate-500 ">Tersedia di Gudang</td>
+                <td class="border border-slate-200 p-4 pr-8 text-slate-500 ">2017</td>
+                <td class="border border-slate-200 p-4 pr-8 text-slate-500 ">Rp9.980.000,00</td>
+      				</tr>
+              <tr>
+        				<td class="border border-slate-200  p-4 pl-8 text-slate-500 ">Monitor CMYK Gaming 120Hz*</td>
+        				<td class="border border-slate-200 p-4 pr-8 text-slate-500 ">Productivity Equipment</td>
+                <td class="border border-slate-200 p-4 pr-8 text-slate-500 ">Tersedia di Gudang</td>
+                <td class="border border-slate-200 p-4 pr-8 text-slate-500 ">2020</td>
+                <td class="border border-slate-200 p-4 pr-8 text-slate-500 ">Rp25.120.000,00</td>
+      				</tr>
+              <tr>
+        				<td class="border border-slate-200  p-4 pl-8 text-slate-500 ">Lampu Gantung Neptunus</td>
+        				<td class="border border-slate-200 p-4 pr-8 text-slate-500 ">Living Room Furniture</td>
+                <td class="border border-slate-200 p-4 pr-8 text-slate-500 ">Tersedia di Gudang</td>
+                <td class="border border-slate-200 p-4 pr-8 text-slate-500 ">2015</td>
+                <td class="border border-slate-200 p-4 pr-8 text-slate-500 ">Rp11.750.000,00</td>
+      				</tr>
+              <tr>
+        				<td class="border border-slate-200  p-4 pl-8 text-slate-500 ">Handle Kopling Bekas Marq Marquez*</td>
+        				<td class="border border-slate-200 p-4 pr-8 text-slate-500 ">Hobby & Accessories</td>
+                <td class="border border-slate-200 p-4 pr-8 text-slate-500 ">Tersedia di Gudang</td>
+                <td class="border border-slate-200 p-4 pr-8 text-slate-500 ">2008</td>
+                <td class="border border-slate-200 p-4 pr-8 text-slate-500 ">Rp12.750.000,00</td>
+      				</tr>
+              <tr>
+        				<td class="border border-slate-200  p-4 pl-8 text-slate-500 ">Lukisan Monalisa Fan Edition</td>
+        				<td class="border border-slate-200 p-4 pr-8 text-slate-500 ">Hobby & Accessories</td>
+                <td class="border border-slate-200 p-4 pr-8 text-slate-500 ">Stok Habis</td>
+                <td class="border border-slate-200 p-4 pr-8 text-slate-500 ">1708</td>
+                <td class="border border-slate-200 p-4 pr-8 text-slate-500 ">Rp1.000.975.000,00</td>
+      				</tr>
+    			</tbody>
+          <caption class="text-slate-500 pt-4 text-xs caption-bottom">
+        
+            *Promo berlaku untuk daerah Papua dan Maluku. Syarat dan Ketentuan berlaku.
+            </caption>
+ 		 </table>
+
+		</div>
+    	</div>
+        <div class="absolute inset-0 pointer-events-none border border-black/5 rounded-xl dark:border-white/5">
+        </div>
+  </div>
+</div>
+
+
+    <!-- Kode Lama
+    <div style="padding: 20px;">
+      <table class="tabel" style="width: 100%;">
+        <tr style="text-align: center; font-style: italic;">
+          <th>Nama Produk</th>
+          <th>Kategori</th>
+          <th>Status Ketersediaan</th>
+          <th>Tahun Produksi</th>
+          <th>Harga Cicilan/bulan (tenor 12 bulan)</th>
+        </tr>
+        <tr>
+          <td>Paket Family Gathering</td>
+          <td>Family Furniture</td>
+          <td>Tersedia di Gudang</td>
+          <td id="age">2019</td>
+          <td id="salary">Rp59.999.000,00</td>
+        </tr>
+        <tr>
+          <td>Fancyson Table Set</td>
+          <td>Kitchen Set</td>
+          <td>Stok habis</td>
+          <td id="age">2020</td>
+          <td id="salary">Rp10.200.000,00</td>
+        </tr>
+        <tr>
+          <td>Kasur Busa Dewa Neptunus</td>
+          <td>Bedroom Furniture</td>
+          <td>Tersedia di Gudang</td>
+          <td id="age">2010</td>
+          <td id="salary">Rp19.999.000,00</td>
+        </tr>
+        <tr>
+          <td>Sendok Sup Abad Ke-17</td>
+          <td>Kitchen Set</td>
+          <td>Stok habis</td>
+          <td id="age">1690</td>
+          <td id="salary">Rp.75.000,00</td>
+        </tr>
+        <tr>
+          <td>Shower Jet Pump</td>
+          <td>Bathroom Equipment</td>
+          <td>Tersedia di Gudang</td>
+          <td id="age">2017</td>
+          <td id="salary">Rp.9.980.000,00</td>
+        </tr>
+        <tr>
+          <td>Monitor CMYK Gaming 120Hz</td>
+          <td>Productivity Equipment</td>
+          <td>Tersedia di Gudang</td>
+          <td id="age">2020</td>
+          <td id="salary">Rp.25.120.000,00</td>
+        </tr>
+        <tr>
+          <td>Lampu Gantung Neptunus</td>
+          <td>Living Room Furniture</td>
+          <td>Tersedia di Gudang</td>
+          <td id="age">2015</td>
+          <td id="salary">Rp.11.750.000,00</td>
+        </tr>
+        <tr>
+          <td>Handle Kopling Bekas Marq Marquez</td>
+          <td>Hobby & Accessories</td>
+          <td>Tersedia di Gudang</td>
+          <td id="age">2008</td>
+          <td id="salary">Rp.12.750.000,00</td>
+        </tr>
+        <tr>
+          <td>Lukisan Monalisa Fan Edition</td>
+          <td>Hobby & Accessories</td>
+          <td>Stok habis</td>
+          <td id="age">1708</td>
+          <td id="salary">Rp.1.000.975.000,00</td>
+        </tr>
+      </table>
+    </div>
+ -->
+<br>
+
+
+      <!-- <div class="grid-caption">
+        <div>
+          <img id="yoimiya" src="https://media.matamata.com/thumbs/2022/03/23/55009-deretan-artis-umrah-bareng-fuji-dan-thariq-instagramatputrasiregarr17/745x489-img-55009-deretan-artis-umrah-bareng-fuji-dan-thariq-instagramatputrasiregarr17.jpg" width="100%">
+        </div>
+        <div style="padding: 40px;">
+          <h1 style="text-align: center;color: rgb(26, 87, 167);"><b>Promo Akhir Tahun!</b></h1><br>
+            <h2 style="text-align: center; color: azure;">Dapatkan penawaran khusus promo akhir tahun 2024 berupa hadiah undian "Umroh Gratis Bareng Artis Ter-kece Sepanjang Masa"
+            </h2>
+            <br>
+            <br>
+            <h3 style="text-align: center; color: azure;">
+              Syarat & Ketentuan Berlaku
+            </h3>
+        </div>
+      </div> -->
+<br>
+<br>
+
+<div id="..." class="p-10 relative z-20">
+	<div>
+    	
+        <div class="flex items-center">
+        	<h1 class="inline-block text-2xl sm:text-3xl font-extrabold text-blue-600 tracking-tight">Kepercayaan Pelanggan Kami
+            </h1>
+        </div>
+    </div>
+    
+    <p class="mt-2 text-lg text-slate-700">Mereka tidak berbohong. Real no fake! Asli bukan settingan, no drama!
+    </p>
+  </div>
+
+
+<div class="min-w-full flex-none px-4 sm:px-6">
+	<div class="flex space-x-10 border-t border-slate-200 md:space-x-6 lg:grid lg:grid-cols-4 lg:gap-x-8 lg:space-x-0">
+    	<div class="group relative -mt-px flex flex-none flex-col items-start border-t pb-6 pt-4 text-left md:w-[35vw] md:pb-16 md:pt-8 lg:w-auto border-blue-500">
+        	<h3 class="md:mt-4">
+            	<button type="button" class="text-base/7 font-semibold md:text-slate-900 text-blue-600">
+                	<span class="absolute inset-0 -top-px"></span>
+                    Nezuko
+                </button>
+            </h3>
+            
+            <img class="md:order-first md:rounded-full md:px-2 sm:order-first sm:rounded-full sm:px-2" src="https://shopee.co.id/inspirasi-shopee/wp-content/uploads/2021/12/karakter-anime-terimut.webp" alt="" width="30%">
+            <p class="mt-2 hidden text-sm/6 text-slate-700 md:block">Mmm.... Mmmh... Ghhhh....Pmmm...Mmmm... Khmmmm.</p>
+        </div>
+        <div class="group relative -mt-px flex flex-none flex-col items-start border-t pb-6 pt-4 text-left md:w-[35vw] md:pb-16 md:pt-8 lg:w-auto border-blue-500">
+        	<h3 class="md:mt-4">
+            	<button type="button" class="text-base/7 font-semibold md:text-slate-900 text-blue-600">
+                	<span class="absolute inset-0 -top-px"></span>
+                    Satoru Gojo
+                </button>
+            </h3>
+            
+            <img class="md:order-first md:rounded-full md:px-2 sm:order-first sm:rounded-full sm:px-2" src="https://cdn.oneesports.id/cdn-data/sites/2/2022/12/Gojo-Jujutsu-Kaisen-Season-2-1024x576.jpg" alt="" width="30%">
+            <p class="mt-2 hidden text-sm/6 text-slate-700 md:block">Harganya murah banget, gue beli agak banyak kasurnya karena empuk-empuk. Ini baso acinya kering dan instan gitu, maksud gue bantal berbentuk baso aci.</p>
+        </div>
+        <div class="group relative -mt-px flex flex-none flex-col items-start border-t pb-6 pt-4 text-left md:w-[35vw] md:pb-16 md:pt-8 lg:w-auto border-blue-500">
+        	<h3 class="md:mt-4">
+            	<button type="button" class="text-base/7 font-semibold md:text-slate-900 text-blue-600">
+                	<span class="absolute inset-0 -top-px"></span>
+                    Anya
+                </button>
+            </h3>
+            
+            <img class="md:order-first md:rounded-full md:px-2 sm:order-first sm:rounded-full sm:px-2" src="https://berandaperistiwa.com/wp-content/uploads/2024/04/Anime-20230828121723.webp" alt="" width="30%">
+            <p class="mt-2 hidden text-sm/6 text-slate-700 md:block">Buat party lover mungkin bisa merapat ya gais. Ini ada lampu disko buat di kamar mandi, gilaaa. Harganya juga standar lah, jadi cocok buat party.</p>
+        </div>
+        <div class="group relative -mt-px flex flex-none flex-col items-start border-t pb-6 pt-4 text-left md:w-[35vw] md:pb-16 md:pt-8 lg:w-auto border-blue-500">
+        	<h3 class="md:mt-4">
+            	<button type="button" class="text-base/7 font-semibold md:text-slate-900 text-blue-600">
+                	<span class="absolute inset-0 -top-px"></span>
+                    Hoshii Miki
+                </button>
+            </h3>
+            
+            <img class="md:order-first md:rounded-full md:px-2 sm:order-first sm:rounded-full sm:px-2" src="https://external-preview.redd.it/BJcwjoNzboLMeRjNu-C_g1tkvkmCoR_Fxff8d4eW0cI.png?format=pjpg&auto=webp&s=75eccb5477cf4ae376bc4900f9ca61c90773573f" alt="" width="30%">
+            <p class="mt-2 hidden text-sm/6 text-slate-700 md:block">Produser baik hati, sering-sering beliin jajanan di sini, oke! Nanti Miki masakin sate Ayam kesukaan produser.</p>
+        </div>
+        </div>
+        </div>
+        
+
+
+        <!-- Kode Lama
+      <div id="testimoni" class="wrapper">
+        <div class="box">
+          <i class="fas fa-quote-left quote"></i>
+          <p>Mmm.... Mmmh... Ghhhh....Pmmm...Mmmm... Khmmmm</p>
+          <div class="content">
+            <div class="info">
+              <div class="name">Nezuko</div>
+              <div class="job">Freelancer | Jurig Lembah Naga</div>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+            <div class="image">
+              <img src="https://shopee.co.id/inspirasi-shopee/wp-content/uploads/2021/12/karakter-anime-terimut.webp" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <i class="fas fa-quote-left quote"></i>
+          <p>Harganya murah banget, gue beli agak banyak kasurnya karena empuk-empuk. Ini baso acinya kering dan instan gitu, maksud gue bantal berbentuk baso aci.</p>
+          <div class="content">
+            <div class="info">
+              <div class="name">Satoru Gojo</div>
+              <div class="job">Donut Maker | Anata Yowai mo</div>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+            <div class="image">
+              <img src="https://cdn.oneesports.id/cdn-data/sites/2/2022/12/Gojo-Jujutsu-Kaisen-Season-2-1024x576.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <i class="fas fa-quote-left  quote"></i>
+          <p>Buat party lover mungkin bisa merapat ya gais. Ini ada lampu disko buat di kamar mandi, gilaaa. Harganya juga standar lah, jadi cocok buat party.</p>
+          <div class="content">
+            <div class="info">
+              <div class="name">Anya</div>
+              <div class="job">Anak mama Yor | Bocil Biasa</div>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+            <div class="image">
+              <img src="https://berandaperistiwa.com/wp-content/uploads/2024/04/Anime-20230828121723.webp" alt="">
+            </div>
+          </div>
+        </div>
+      </div> -->
+<br>
+
+
+      <form>
+        <h1>Kotak Saran</h1>
+        <textarea id="textarea" name="textarea" rows="9" cols="50"></textarea>
+        <br>
+        <input type="submit" value="Kirim">
+      </form>
+
+
+      <div class="fixed">
+        <a href="#head">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Eo_circle_green_arrow-up.svg/1024px-Eo_circle_green_arrow-up.svg.png" width="100%">
+        </a>
+      </div>
+        
+      <br>
+
+      <footer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-32" bg-sky-600">
+      
+        <div class="border-t border-blue-300 pt-10 pb-16">
+            <div class="text-center">
+                <p class="mt-4 text-sm leading-6 text-slate-500">Cleaning Inside Sukabumi 2024. Template by TailwindCSS.<br>Hak cipta dilindungi Yang Maha Pelindung.</p></div></div></footer>
+<!-- 
+      <div class="footer">
+        <p>
+        Properti milik <i>Cleaning Inside</i> | 2024 <br>
+        Hak cipta dilindungi Yang Maha Kuasa
+        </p>
+    </div> -->
+
+
+</body>
+</html>

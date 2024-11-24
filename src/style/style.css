@@ -1,0 +1,163 @@
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
+.header {
+    @apply overflow-hidden bg-[#c9d3ff] p-2.5;
+  }
+  .header a {
+    @apply float-left text-[rgb(30,32,110)] text-center no-underline text-lg leading-[25px] p-2.5 rounded-[5px] hover:bg-[#ddd] hover:text-[black];
+  }
+  .header a.navbutton:hover {
+    @apply bg-[dodgerblue] text-[white];
+  }
+  .header-right {
+    @apply float-right;
+  }
+  .judul {
+    @apply p-[50px];
+  }
+  @media screen and (max-width: 500px) {
+    .header a {
+      @apply float-none block text-left;
+    }
+    .header-right {
+      @apply float-none;
+    }
+  }
+  .banner {
+    @apply w-full;
+  }
+  .button {
+    @apply object-right w-[100px] border m-2.5 border-dotted border-[gray];
+  }
+  .partition-column {
+    @apply border border-dotted border-[gray];
+    column-count: 3;
+  }
+  .text-image {
+    @apply ml-2.5 mr-0 mt-0 mb-2.5;
+  }
+  .separation-container {
+    column-count: 2;
+  }
+  .grid-container {
+    @apply grid grid-cols-[auto_auto] gap-2.5 bg-[#2196F3] p-2.5;
+  }
+  .grid-container > div {
+    @apply bg-[rgba(255,255,255,0.8)] border text-center text-3xl border-solid border-[black] bg-[rgba(255,255,255,0.8)] border text-center text-3xl border-solid border-[rgb(196,22,22)];
+  }
+  .row {
+    @apply flex flex-wrap p-[50px];
+    display: -ms-flexbox;
+  
+    /* IE10 */
+    -ms-flex-wrap: wrap;
+  
+    /* IE10 */
+  }
+  .column {
+    @apply flex-[2%] max-w-full px-1 py-0;
+    -ms-flex: 25%;
+  
+    /* IE10 */
+  }
+  .column img {
+    @apply align-middle w-full mt-2;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      @apply flex-[50%] max-w-[50%];
+      -ms-flex: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      @apply flex-[100%] max-w-full;
+      -ms-flex: 100%;
+    }
+  }
+  .grid-caption {
+    @apply grid w-full grid-cols-[auto_auto] gap-2.5 bg-[#98b3ff] p-0;
+  }
+  th,
+  td {
+    @apply p-[5px];
+  }
+  table,
+  th,
+  td {
+    @apply border border-solid border-[rgb(104,104,104)];
+  }
+  #age {
+    @apply text-center;
+  }
+  #salary {
+    @apply text-right;
+  }
+  .footer {
+    @apply bg-[#c9d3ff] text-center text-[small] text-[black] p-5;
+    font-family: verdana;
+  }
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+  * {
+    @apply box-border m-0 p-0;
+    font-family: "Poppins", sans-serif;
+  }
+  ::selection {
+    background: rgba(23, 162, 184, 0.3);
+  }
+  .wrapper {
+    @apply max-w-[1200px] flex flex-wrap items-center justify-between m-auto px-5 py-0;
+  }
+  .wrapper .box {
+    @apply w-[calc(33%_-_10px)] shadow-[0px_4px_8px_rgba(0,0,0,0.15)] p-[25px] rounded-[10px];
+    background: #fff;
+  }
+  .wrapper .box i.quote {
+    @apply text-xl text-[#17a2b8];
+  }
+  .wrapper .box .content {
+    @apply flex flex-wrap items-center justify-between pt-2.5;
+  }
+  .box .info .name {
+    @apply font-semibold text-[17px];
+  }
+  .box .info .job {
+    @apply text-base font-medium text-[#17a2b8];
+  }
+  .box .info .stars {
+    @apply mt-0.5;
+  }
+  .box .info .stars i {
+    @apply text-[#17a2b8];
+  }
+  .box .content .image {
+    @apply h-[75px] w-[75px] p-[3px] rounded-[50%];
+    background: #17a2b8;
+  }
+  .content .image img {
+    @apply h-full w-full object-cover rounded-[50%] border-2 border-solid border-white;
+  }
+  .box:hover .content .image img {
+    @apply border-white;
+  }
+  @media (max-width: 1045px) {
+    .wrapper .box {
+      @apply w-[calc(50%_-_10px)] mx-0 my-2.5;
+    }
+  }
+  @media (max-width: 702px) {
+    .wrapper .box {
+      @apply w-full;
+    }
+  }
+  div.fixed {
+    @apply fixed w-[30px] border-0 border-solid border-[#73AD21] right-5 bottom-5;
+  }
+  
